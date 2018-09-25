@@ -37,8 +37,8 @@ class InputForm extends Component {
           </label>
           <textarea id="apply" rows="8" cols="100" onChange={this.handleChange} value={this.state.appInput}/>
           <button>Submit</button>
-          <p id="message">{this.state.submitMessage}&nbsp;</p>
         </form>
+        <p id="message">{this.state.submitMessage}&nbsp;</p>
         <Preview previewText={this.state.appInput}/>
       </React.Fragment>
     )

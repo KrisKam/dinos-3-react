@@ -1,29 +1,34 @@
-import React from "react";
+import React, {Component} from "react";
 
 
 class Preview extends Component {
 
   state = {
-    showPreview: false,
-    className: "hidden"
+    showPreview: false
   }
 
   togglePreview = () => {
-    const showPreview = 
+    this.setState({showPreview: !this.state.showPreview})
   }
+
+  show = () => {
+    if (this.state.showPreview) {
+      return (<section id="application-preview">
+        {this.props.previewText}
+      </section>)
+    }
+  }
+
+
   render() {
 
     return (
       <React.Fragment>
-        <button onClick={this.togglePreview}>Show Preview</button>
-        <section id="application-preview" >
-          {props.previewText}
-        </section>
+        <button onClick={()=>this.togglePreview()}>Show Preview</button>
+        {this.show()}
       </React.Fragment>
     );
-
   }
-
 }
 
 export default Preview;

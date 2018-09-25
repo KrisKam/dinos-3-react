@@ -82,8 +82,7 @@ footer small {
   margin: 0 auto;
 }
 
-/* Helper */
-
-.hidden {
-  display: none;
+label, textarea, button {
+  display: block;
+  margin: 3px
 }
